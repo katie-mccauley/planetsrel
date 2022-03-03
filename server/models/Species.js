@@ -5,7 +5,8 @@ const ObjectId = Schema.Types.ObjectId
 export const SpeciesSchema = new Schema(
 
   {
-    name: { type: String, required: true }
+    name: { type: String, required: true },
+    creatorId: { type: ObjectId, required: true }
   },
   { timestamps: true, toJSON: { virtuals: true } }
 )
